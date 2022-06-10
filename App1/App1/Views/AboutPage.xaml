@@ -74,6 +74,10 @@
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
+                <StackLayout Orientation="Horizontal" Padding="5, 0, 5, 0">
+                    <Switch x:Name="IsExpiredSwitch" Toggled="IsExpiredSwitch_Toggled" VerticalOptions="Center" />
+                    <Label Text="Expired" VerticalOptions="Center" />
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </Grid>

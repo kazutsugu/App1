@@ -4,14 +4,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1.UWP", "App1\App1.UWP\App1.UWP.csproj", "{6AA29AA1-B613-46F1-83BE-25F6C610AB44}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3} = {EE82E495-26E5-4793-BDD1-1EDF10A099E3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1.Android", "App1\App1.Android\App1.Android.csproj", "{2B2F17D7-A61D-42B0-A11C-3473053F4E4A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1.iOS", "App1\App1.iOS\App1.iOS.csproj", "{BB0EB4C7-3466-4DD5-9F79-90F554D4843A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1", "App1\App1\App1.csproj", "{A42CB3A7-68AD-4968-82D5-71109F1F57B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App1", "App1\App1\App1.csproj", "{A42CB3A7-68AD-4968-82D5-71109F1F57B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{06EF9392-285C-44B7-9046-C1171DED485A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{06EF9392-285C-44B7-9046-C1171DED485A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystrayComponent", "App1\SystrayComponent\SystrayComponent.csproj", "{EE82E495-26E5-4793-BDD1-1EDF10A099E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -197,6 +202,30 @@ Global
 		{06EF9392-285C-44B7-9046-C1171DED485A}.Release|x64.Build.0 = Release|Any CPU
 		{06EF9392-285C-44B7-9046-C1171DED485A}.Release|x86.ActiveCfg = Release|Any CPU
 		{06EF9392-285C-44B7-9046-C1171DED485A}.Release|x86.Build.0 = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|ARM.Build.0 = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|x64.Build.0 = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Debug|x86.Build.0 = Debug|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|ARM.ActiveCfg = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|ARM.Build.0 = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|iPhone.Build.0 = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|x64.ActiveCfg = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|x64.Build.0 = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE82E495-26E5-4793-BDD1-1EDF10A099E3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

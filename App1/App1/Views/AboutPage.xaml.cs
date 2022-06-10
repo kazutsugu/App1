@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +14,19 @@ namespace App1.Views
         public AboutPage()
         {
             InitializeComponent();
+
+            bool isExpired = Preferences.Get("isExpired", false);
+            IsExpiredSwitch.IsToggled = isExpired;
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IsExpiredSwitch_Toggled(object sender, ToggledEventArgs e)
+        {
+            Preferences.Set("isExpired", IsExpiredSwitch.IsToggled);
         }
     }
 }

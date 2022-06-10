@@ -4,18 +4,21 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10" 
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="e82c547a-9f7c-4546-bd60-be591f17a35c"
-    Publisher="CN=d894033a-de9f-4948-9ce6-2bf53b11a0d7"
+    Name="Xamarin.Sample"
+    Publisher="CN=International Telecommunications Union (ITU), O=International Telecommunications Union (ITU), S=Genève, C=CH"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>App1.UWP</DisplayName>
-    <PublisherDisplayName>d894033a-de9f-4948-9ce6-2bf53b11a0d7</PublisherDisplayName>
+    <DisplayName>Xamarin.Sample</DisplayName>
+    <PublisherDisplayName>International Telecommunication Union (ITU)</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -46,10 +49,33 @@
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
-    </Application>
+		<Extensions>
+			<uap:Extension Category="windows.appService">
+				<uap:AppService Name="SystrayExtensionService" />
+			</uap:Extension>
+			<desktop:Extension Category="windows.fullTrustProcess" Executable="Win32\SystrayComponent.exe">
+				<desktop:FullTrustProcess>
+					<desktop:ParameterGroup GroupId="expired" Parameters="expired"/>
+				</desktop:FullTrustProcess>
+			</desktop:Extension>
+
+        <uap5:Extension
+          Category="windows.startupTask"
+          Executable="App1.UWP.exe"
+          EntryPoint="App1.UWP">
+          <uap5:StartupTask
+              TaskId="MyStartupId"
+              Enabled="false"
+              DisplayName="Xamarin.Sample" />
+        </uap5:Extension>
+		
+  </Extensions>
+	</Application>
   </Applications>
 
   <Capabilities>
     <Capability Name="internetClient" />
+	  <rescap:Capability Name="runFullTrust" />
+	  <rescap:Capability Name="confirmAppClose" />
   </Capabilities>
 </Package>
